@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aplikasi Perekaman Data Rental Mobil</title>
+	<script src="/js/angular.min.js"></script>
+	<script src="/js/mbl-controller.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    
+    </head>
+    <body ng-app="MblApp" class="container">
+        
+        <div class="jumbotron">
+            <h1 style="text-align: center;">Aplikasi Perekaman Data Rental Mobil</h1>
+            <h2 style="text-align: center;">Daftar Mobil</h2>
+            
+            
+        </div>
+        <div class="well" ng-controller="MblController">
+        <div class="row">
+        <div class="col-md-6 text-left">
+            <a href="/tambah" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Tambah Data</a>
+        </div>
+        <div class="col-md-6 text-right">
+        <button class="btn btn-danger" ng-click="keluar()"><span class="glyphicon glyphicon-log-out"></span> Keluar</button>
+        
+        </div>
+        </div><br/> <br/>
+            <table class="table table-bordered table-striped table-hovered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>No. POLISI</th>
+                        <th>MERK TIPE</th>
+                        <th width="200px">AKSI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="mbl in daftarMbl">
+                        <td>{{ mbl.id }}</td>
+                        <td>{{ mbl.nopol }}</td>
+                        <td>{{ mbl.merk_tipe }}</td>
+                        <td>
+                        <button class="btn btn-warning" ng-click="ubah(mbl)"><span class="glyphicon glyphicon-edit"></span> Ubah</button>
+                        <button class="btn btn-danger" ng-click="hapus(mbl)"><span class="glyphicon glyphicon-trash"></span> Hapus</button></td>
+                        
+                    </tr>
+                </tbody>
+                
+            </table>
+            
+        </div>
+        <script src="/bootstrap/js/jquery-1.11.3.min.js"></script>
+        
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+    
+
+
+            
+
+    </body>
+</html>

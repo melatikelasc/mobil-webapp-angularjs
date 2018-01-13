@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entry Data</title>
+	<script src="/js/angular.min.js"></script>
+	<script src="/js/mbl-controller.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+</head>
+<body ng-app="MblApp" ng-controller="FormController" class="container">
+	<div class="jumbotron">
+		<h1>Form Entry Data</h1>
+	</div>
+
+	<form>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">ID</label>
+			<input class="form-control" type="text" placeholder="Masukkan ID..." ng-model="mbl.id" />
+			
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">No. Polisi</label>
+			<input class="form-control" type="text" placeholder="Masukkan nomor polisi..." ng-model="mbl.nopol" />
+			
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Merk Tipe</label>
+			<input class="form-control" type="text" placeholder="Masukkan merk tipe..." ng-model="mbl.merk_tipe" />
+			
+		</div>
+		<div class="form-group row">
+			<button class="btn btn-primary" ng-click="simpan()">Simpan</button>
+			<button class="btn btn-warning" ng-click="batal()">Batal</button>
+		</div>
+	</form>
+
+</body>
+</html>
